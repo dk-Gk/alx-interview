@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script to get stats from a request"""
+"""Log Parsing"""
 
 import sys
 
