@@ -9,6 +9,7 @@ def solve(row, column):
         solver = place_queen(q, column, solver)
     return solver
 
+
 def place_queen(q, column, prev_solver):
     solver_queen = []
     for array in prev_solver:
@@ -17,12 +18,14 @@ def place_queen(q, column, prev_solver):
                 solver_queen.append(array + [x])
     return solver_queen
 
+
 def is_safe(q, x, array):
     if x in array:
         return (False)
     else:
         return all(abs(array[column] - x) != q - column
                    for column in range(q))
+
 
 def init():
     if len(sys.argv) != 2:
@@ -38,6 +41,7 @@ def init():
         sys.exit(1)
     return(the_queen)
 
+
 def n_queens():
 
     the_queen = init()
@@ -47,6 +51,7 @@ def n_queens():
         for q, x in enumerate(array):
             clean.append([q, x])
         print(clean)
+
 
 if __name__ == '__main__':
     n_queens()
