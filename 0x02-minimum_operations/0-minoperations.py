@@ -5,7 +5,7 @@
 def minOperations(n):
     """method that calculates the fewest number of operations needed """
     pasted_chars = 1
-    clipboard =0
+    clipboard = 0
     counter = 0
 
     while pasted_chars < n:
@@ -13,7 +13,7 @@ def minOperations(n):
             clipboard = pasted_chars
             counter += 1
 
-        if pasted_chars ==  1:
+        if pasted_chars == 1:
             pasted_chars += clipboard
             counter += 1
             continue
