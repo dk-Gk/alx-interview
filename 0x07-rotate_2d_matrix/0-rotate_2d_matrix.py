@@ -3,7 +3,7 @@
 
 
 def rotate_2d_matrix(m):
-    """Given an n x n 2D matrix, rotate it 
+    """Given an n x n 2D matrix, rotate it
     90 degrees clockwise
     """
 
