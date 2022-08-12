@@ -13,7 +13,7 @@ def minOperations(n):
             clipboard = pasted_chars
             counter += 1
 
-        if pasted_chars == 1:
+        if pasted_chars ==  1:
             pasted_chars += clipboard
             counter += 1
             continue
