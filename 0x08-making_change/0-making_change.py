@@ -9,13 +9,13 @@ def makeChange(coins, total):
     """
     if total < 1:
         return 0
-    change = 0
-    coins.sort(reverse=True)
-    for coin in coins:
-        temp_change = int(total / coin)
-        total -= (temp_change * coin)
-        change += temp_change
-        if total == 0:
-            return change
-        if total != 0:
-            return -1
+    num_coins = len(coins)
+    max_value = total + sum(coins)
+
+    change = [[max_value] * (total + 1) for _ in range(num_coins + 1)]
+    for i in range(num_coins + 1):
+        dp[i][0] = 0
+    for i in range(1, num_coins + 1):
+        coin_value = coins[i - 1]
+        for j in range(1, total + 1):
+            
